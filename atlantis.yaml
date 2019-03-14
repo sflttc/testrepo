@@ -15,9 +15,9 @@ workflows:
       steps:
       - run: echo "running plan"
       - plan:
-        extra_args: ["-var-file","main.tfvars"]
+            extra_args: ["-var-file","main.tfvars"]
     apply:
       steps:
       - run: echo "running apply"
       - apply:
-        extra_args: ["-var-file","main.tfvars"]
+            extra_args: ["-var-file","main.tfvars"]
