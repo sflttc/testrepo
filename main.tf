@@ -1,2 +1,4 @@
-resource "null_resource" "${var.foo}" {
-} 
+module "output_foo" {
+    source = "modules/output"
+    intput = "foo"
+}
