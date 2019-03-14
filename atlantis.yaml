@@ -13,13 +13,11 @@ workflows:
   myworkflow:
     plan:
       steps:
-      - var: 
-         foo: bar
-      - run: echo "running main.tf"
-      - plan
+      - run: echo "running plan"
+      - plan:
+        extra_args: ["-var-file","main.tfvars"]
     apply:
       steps:
-      - run: echo hi
-      - var: 
-         foo: bar
-      - apply
+      - run: echo "running apply"
+      - apply:
+        extra_args: ["-var-file","main.tfvars"]
