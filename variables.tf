@@ -1,3 +1,3 @@
 variable "foo" {
-    deafult = "donkey"
+    default = "donkey"
 }
