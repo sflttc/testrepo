@@ -16,6 +16,7 @@ workflows:
       steps:
       - run: echo "running main.tf"
       - init
+          extra_args: ["-var","foo=bar"]
       - plan:
           extra_args: ["-lock", "false"]
     apply:
