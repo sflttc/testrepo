@@ -14,12 +14,12 @@ workflows:
     plan:
       steps:
       - var: 
-        - foo: bar
+         foo: bar
       - run: echo "running main.tf"
       - plan
     apply:
       steps:
       - run: echo hi
       - var: 
-        - foo: bar
+         foo: bar
       - apply
