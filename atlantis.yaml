@@ -15,9 +15,11 @@ workflows:
       steps:
       - run: echo "running main.tf"
       - init:
-          extra_args: ["-var","foo=bar"]
+          extra_args: ["-var='foo=bar'"]
       - plan
     apply:
       steps:
       - run: echo hi
+      - init:
+          extra_args: ["-var='foo=bar'"]
       - apply
