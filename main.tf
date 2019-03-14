@@ -1,1 +1,4 @@
-resource "null_resource" "example" {}
+module "output_foo" {
+    source = "modules/output"
+    input = "foo"
+}
