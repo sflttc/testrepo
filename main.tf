@@ -1,3 +1,2 @@
-variable "foo" {
-    value = "donkey"
-}
+resource "null_resource" "${var.foo}" {
+} 
